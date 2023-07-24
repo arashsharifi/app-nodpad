@@ -1,0 +1,63 @@
+@import "./main.css";
+
+body {
+    overflow: hidden;
+}
+
+.warpper {
+    width: 380px;
+    margin: 10px auto;
+    font-size: 3rem;
+    position: relative;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+div svg {
+    position: absolute;
+    /* background-color: ; */
+    width: 70%;
+    height: 70%;
+    top: 10px;
+    right: 20px;
+
+
+}
+
+
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    /* background-color: ; */
+    z-index: 1000;
+    font-size: 2rem;
+    height: 60%;
+    padding: 0 20px;
+
+}
+
+.text-box h1 {
+    font-size: 50px;
+    font-style: italic;
+    width: 75%;
+}
+
+.text-box a {
+    background-color: var(--light);
+    border-radius: 1rem;
+    font-size: 2rem;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid var(--dark);
+}
+
+.text-box a:hover {
+    background-color: var(--secondery);
+}

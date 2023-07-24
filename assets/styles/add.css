@@ -1,0 +1,58 @@
+@import "./main.css";
+
+.container {
+    display: flex;
+    width: 400px;
+    margin: 10px auto;
+    height: 90vh;
+    /* background-color: var(--light); */
+    background-color: #f9f4eb;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 95%;
+}
+
+.wrapper {
+    border: 3px solid var(--dark);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.wrapper input {
+    border-radius: 30px;
+    height: 90px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.wrapper textarea {
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-size: 3rem;
+    /* background-color: aqua; */
+}
+
+.actions button {
+    font-size: 20px;
+    padding: 7px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f9f4eb;
+}
+
+button:nth-child(2):hover {
+    background-color: var(--primary);
+}

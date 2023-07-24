@@ -1,0 +1,91 @@
+@import "./main.css";
+
+.container {
+    width: 400px;
+    background-color: #f9f4eb;
+    margin: 10px auto;
+    height: 90vh;
+    padding: 30px;
+
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* background-color: chartreuse; */
+    gap: 4rem;
+}
+
+.title {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.title button {
+    background-color: #f9f4eb;
+    font-size: 3rem;
+    border-radius: 2rem;
+}
+
+.title button:hover {
+    background-color: var(--primary);
+}
+
+.tags {
+    /* background-color: brown; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.tags span {
+    border: 2px solid var(--dark);
+    padding: 7px 11px;
+    border-radius: 20px;
+
+}
+
+.active {
+    background-color: var(--primary);
+}
+
+.no-notes {
+    display: flex;
+    gap: 3rem;
+    font-size: 19px;
+    font-style: italic;
+    /* background-color: blue; */
+}
+
+.cards {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card {
+    margin-top: 20px;
+    background-color: var(--secondery);
+    padding: 30px 20px 20px 20px;
+    border-radius: 10px;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.bi {
+    cursor: pointer;
+}

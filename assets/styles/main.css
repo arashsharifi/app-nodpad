@@ -1,0 +1,10 @@
+@import "./reset.css";
+
+
+:root {
+    --primary: #CAEC3D;
+    --secondery: #D1B6F9;
+    --terinary: #FCFAFB;
+    --dark: #1F1F2E;
+    --light: #fefefe;
+}
