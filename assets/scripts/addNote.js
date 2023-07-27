@@ -1,17 +1,22 @@
 const sunmitBtn = document.querySelector('#submit');
 const form = document.querySelector("form");
+
+const category = document.querySelector("select");
+console.log(category)
+
 console.log(sunmitBtn);
 
 eventListener();
 
 function eventListener() {
-    sunmitBtn.addEventListener('click', handelSubmit)
+    sunmitBtn.addEventListener("click", handelSubmit)
 }
 
 function handelSubmit(e) {
     e.preventDefault()
     const note = Object.fromEntries(new FormData(form).entries())
     if (note.title && note.text) {
+
         //add handeling
         // console.log('yes it can submit')
         note.id = Date.now()
@@ -25,16 +30,19 @@ function handelSubmit(e) {
             "linear-gradient(to right,#6ab04c, #badc58)",
 
             2000, () => location.assign("notes.html"))
+
     } else {
         generatost('this is no text in hear',
             "linear-gradient(to right, #eb4d4b, #ff7979)",
 
             3000, () => location.assign("notes.html"))
+
     }
 }
 
 //add function for tost object
 function generatost(text, color, duration, callback) {
+
     Toastify({
         text: text,
         duration: duration,
@@ -61,4 +69,8 @@ function addNewNote(getvalueNote) {
     console.log(notes)
 
     localStorage.setItem('noteList', JSON.stringify(notes))
+}
+
+function editNote(id) {
+    console.log(id)
 }
