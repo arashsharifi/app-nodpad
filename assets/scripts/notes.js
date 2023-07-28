@@ -12,7 +12,9 @@ let tag = "#all"
 eventListener();
 
 function eventListener() {
+
     document.addEventListener('DOMContentLoaded', bildCard)
+
     cardContainer.addEventListener('click', removeClidElement)
 
     tags.forEach(tag => tag.addEventListener('click', changeTge));
@@ -40,8 +42,8 @@ function bildCard() {
 
 
 function generatNote(arrayNotes) {
-
     arrayNotes.forEach(note => {
+
         // console.log(note)
         const card = document.createElement('div')
         card.classList = "card"
@@ -51,7 +53,7 @@ function generatNote(arrayNotes) {
           ${note.title}
              <div>
               
-              <a href="./add.html" onclick="editNote(${note.id})"><i class="bi bi-pen-fill"></i></a>
+            <i class="bi bi-pen-fill" onclick="editNote(${note.id})"></i>
              <i class="bi bi-backspace-fill" onclick="deletNote(${note.id})"></i>
              </div>
 
@@ -74,8 +76,15 @@ function deletNote(id) {
 
 }
 
+function editNote(id) {
+
+    localStorage.setItem("editObject", id)
+
+    location.assign('add.html')
+}
+
 function removeClidElement(e) {
-    console.log(e.target.classList)
+    // console.log(e.target.classList)
     if (e.target.classList.contains('bi')) {
         e.target.parentElement.parentElement.parentElement.parentElement.remove()
     } else {

@@ -1,6 +1,11 @@
 const sunmitBtn = document.querySelector('#submit');
 const form = document.querySelector("form");
 
+const title = document.querySelector('#title');
+const textArea = document.querySelector('#text');
+console.log(title);
+console.log(textArea);
+
 const category = document.querySelector("select");
 console.log(category)
 
@@ -10,6 +15,8 @@ eventListener();
 
 function eventListener() {
     sunmitBtn.addEventListener("click", handelSubmit)
+
+    document.addEventListener('DOMContentLoaded', forEdit)
 }
 
 function handelSubmit(e) {
@@ -71,6 +78,44 @@ function addNewNote(getvalueNote) {
     localStorage.setItem('noteList', JSON.stringify(notes))
 }
 
-function editNote(id) {
-    console.log(id)
+
+
+function forEdit() {
+    const getfromLs = JSON.parse(localStorage.getItem('noteList'))
+    console.log(getfromLs)
+
+    const toEditLS = JSON.parse(localStorage.getItem('editObject'))
+    console.log(toEditLS)
+
+    getfromLs.forEach(element => {
+        if (element.id == toEditLS) {
+            title.value = `${element.title}`
+            textArea.value = `${element.text}`
+        }
+    });
+
+    // let toeditArr = []
+    // toeditArr.push(toEditLS)
+
+    // let acuId = []
+    // getfromLs.forEach(element => {
+    //     acuId.push(element.id)
+    // });
+
+    // console.log(toeditArr)
+    // console.log(acuId)
+    // let fundMach = false
+    // for (let i = 0; i < acuId.length; i++) {
+    //     if (toeditArr.includes(acuId[i])) {
+    //         fundMach = true
+    //         break;
+    //     }
+
+    // }
+    // if (fundMach) {
+    //     console.log('yes')
+    // } else {
+    //     console.log('no')
+    // }
+
 }
