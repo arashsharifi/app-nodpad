@@ -30,7 +30,8 @@ function bildCard() {
         noNotes.style.display = "none"
         const notes = hasLocalStorage ? JSON.parse(localStorage.getItem('noteList')) : []
 
-        const notesOfTag = notes.filter((note) => note.category == tag)
+        const notesOfTag = tag !== "#all" ? notes.filter((note) => note.category == tag) : notes
+
 
         // console.log(notes)
         if (notesOfTag.length > 0) {
@@ -43,7 +44,6 @@ function bildCard() {
 
 function generatNote(arrayNotes) {
     arrayNotes.forEach(note => {
-
         // console.log(note)
         const card = document.createElement('div')
         card.classList = "card"
@@ -93,6 +93,7 @@ function removeClidElement(e) {
 }
 
 function changeTge() {
+    cardContainer.innerHTML = ''
     tags.forEach(tag => tag.classList = '');
 
     this.classList = "active"
