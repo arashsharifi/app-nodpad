@@ -24,13 +24,13 @@ function handelSubmit(e) {
     if (forEdit()) {
 
         myedite(note)
-        //         form.reset()
-        //         generatost("my note is add mylist",
+        form.reset()
+        generatost("my note is add mylist",
 
-        //             "linear-gradient(to right,#6ab04c, #badc58)",
+            "linear-gradient(to right,#6ab04c, #badc58)",
 
-        //             2000, () => location.assign("notes.html"))
-        //         return
+            2000, () => location.assign("notes.html"))
+        return
     }
     if (note.title && note.text) {
 
@@ -57,17 +57,18 @@ function handelSubmit(e) {
 
 function myedite(note) {
     console.log(note)
-    // const iditId = forEdit()
-    // const notList = JSON.parse(localStorage.getItem('noteList'))
-    // notList.forEach((item) => {
-    //     if (item.id === iditId) {
-    //         item.title = note.title;
-    //         item.text = note.text;
+    const iditId = forEdit()
+    console.log(iditId)
+    const notList = JSON.parse(localStorage.getItem('noteList'))
+    notList.forEach((item) => {
+        if (item.id === iditId) {
+            item.title = note.title;
+            item.text = note.text;
 
-    //     }
-    // });
-    // localStorage.removeItem("editObject");
-    // localStorage.setItem('noteList', JSON.stringify(notList))
+        }
+    });
+    localStorage.removeItem("editObject");
+    localStorage.setItem('noteList', JSON.stringify(notList))
 }
 
 
@@ -111,14 +112,14 @@ function forEdit() {
     const toEditLS = JSON.parse(localStorage.getItem('editObject'))
     console.log(toEditLS)
 
-    // getfromLs.forEach(element => {
-    //     if (element.id == toEditLS) {
-    //         title.value = `${element.title}`
-    //         textArea.value = `${element.text}`
+    getfromLs.forEach(element => {
+        if (element.id == toEditLS) {
+            title.value = `${element.title}`
+            textArea.value = `${element.text}`
 
-    //     }
+        }
 
-    // });
+    });
 
     return toEditLS
 }
