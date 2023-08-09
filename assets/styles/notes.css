@@ -65,9 +65,10 @@
 }
 
 .cards {
-    overflow: scroll;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    height: 19rem;
 
 }
 
@@ -76,12 +77,15 @@
     background-color: var(--secondery);
     padding: 30px 20px 20px 20px;
     border-radius: 10px;
+    /* height: 10rem; */
+    height: 55%;
 }
 
 .cart-title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    /* background-color: aqua; */
     padding-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -93,9 +97,35 @@
     display: flex;
     font-size: 23px;
     justify-content: space-between;
-    /* background-color: aqua;*/
+    /* background-color: aqua; */
 }
 
 .bi {
     cursor: pointer;
+}
+
+
+.search-box{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+.search-box i{
+   background-color: bisque;
+   padding: 6px 15px;
+   border:  3px solid rgb(31, 30, 30);
+   border-radius: 15px;
+}
+
+#search{
+    width: 70%;
+    height: 30px;
+    border: none;
+    font-style: italic;
+    font-size: 19px;
+}
+#search:focus{
+   border: none;
 }
