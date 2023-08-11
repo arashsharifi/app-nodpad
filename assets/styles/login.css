@@ -1,0 +1,81 @@
+@import "./main.css";
+.warpper {
+  position: relative;
+  width: 380px;
+  margin: 10px auto;
+  font-size: 3rem;
+  position: relative;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+div svg {
+  position: absolute;
+  /* background-color: ; */
+  width: 100%;
+  height: 70%;
+
+  bottom: 23rem;
+  right: -20px;
+}
+
+.title {
+  z-index: 1000;
+  width: 90%;
+  font-family: Garamond, serif;
+  font-size: 45px;
+  font-weight: bold;
+  font-style: italic;
+}
+.user-submit-login {
+  margin-top: 8rem;
+  width: 90%;
+  height: 230px;
+  /* background-color: aqua; */
+  font-size: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+}
+.form input {
+  height: 40px;
+  border: 2px solid var(--dark);
+  border-radius: 3rem;
+  font-size: 20px;
+}
+.form label {
+  font-size: 19px;
+  align-self: flex-start;
+  margin-left: 30px;
+}
+
+.form .btn {
+  width: 60%;
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: 3px solid var(--dark);
+  background-color: var(--light);
+  border-radius: 2rem;
+  font-size: 19px;
+  font-style: italic;
+  transition: all 0.5s ease-in-out;
+}
+
+.form .btn:hover {
+  background-color: var(--secondery);
+  box-shadow: 02px 10px 10px 6px var(--dark);
+}
