@@ -102,12 +102,14 @@ function changeTge() {
 }
 
 function searchQuery(e) {
-  console.log("input");
+  // console.log("input");
   const noteList = JSON.parse(localStorage.getItem("noteList"));
   //   console.log(noteList);
 
+  // debounce();
   if (noteList) {
     function mydebunc() {
+      console.log("inupt");
       const filterNoteBysearch = noteList.filter(
         (note) =>
           note.title.includes(e.target.value) ||
@@ -115,7 +117,8 @@ function searchQuery(e) {
       );
       generatNote(filterNoteBysearch);
     }
-    mydebunc();
-    _.debounce(mydebunc, 1000);
+    // mydebunc();
+    const debounce = _.debounce(mydebunc, 2000);
+    debounce();
   }
 }
