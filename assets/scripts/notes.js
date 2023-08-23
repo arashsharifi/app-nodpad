@@ -109,16 +109,16 @@ function searchQuery(e) {
   // debounce();
   if (noteList) {
     function mydebunc() {
-      console.log("inupt");
       const filterNoteBysearch = noteList.filter(
         (note) =>
           note.title.includes(e.target.value) ||
           note.text.includes(e.target.value)
       );
       generatNote(filterNoteBysearch);
+      console.log("inupt");
     }
     // mydebunc();
-    const debounce = _.debounce(mydebunc, 2000);
+    const debounce = _.debounce(mydebunc, 3000);
     debounce();
   }
 }
